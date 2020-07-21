@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [CRM test Suite]">
-  <listeners>
-    <listener class-name="com.qa.Utilities.ExtentReporterNG"/>
-  </listeners>
-  <test name="CRM automation">
-    <packages>
-      <package name="com.qa.testcases"/>
-    </packages>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="com.qa.testcases.SignUpPageTest"/>
-      <class name="com.qa.testcases.LoginPageTest"/>
+      <class name="com.qa.testcases.DataDrivenExample"/>
     </classes>
-  </test> <!-- CRM automation -->
-</suite> <!-- Failed suite [CRM test Suite] -->
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.qa.testcases.DataDrivenExample">
+        <methods>
+          <include name="close"/>
+          <include name="initializeTest"/>
+          <include name="writeData"/>
+        </methods>
+      </class> <!-- com.qa.testcases.DataDrivenExample -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

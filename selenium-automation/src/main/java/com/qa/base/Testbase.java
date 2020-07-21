@@ -23,7 +23,7 @@ public class Testbase {
 		
 		FileInputStream ip;
 		try {
-			ip = new FileInputStream("/Users/jnanda/Documents/Avishek/Vlocity/selenium-automation/src/main/java/com/qa/config/config.properties");
+			ip = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/com/qa/config/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -40,7 +40,7 @@ public class Testbase {
 	{
 		String browserurl = prop.getProperty("url");
 			
-		System.setProperty("webdriver.chrome.driver", "/Users/jnanda/Documents/Avishek/Vlocity/selenium-automation/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 		
 		 driver = new ChromeDriver();
 		
