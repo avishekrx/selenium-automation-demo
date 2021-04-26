@@ -7,6 +7,12 @@
   
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
   <dependencies>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.1.1</version>
+        <scope>compile</scope>
+    </dependency>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
