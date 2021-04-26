@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.testcases.DataDrivenExample">
+        <methods>
+          <include name="close"/>
+          <include name="initializeTest"/>
+          <include name="writeData"/>
+        </methods>
+      </class> <!-- com.qa.testcases.DataDrivenExample -->
+      <class name="com.qa.testcases.SignUpPageTest">
+        <methods>
+          <include name="initializeTest"/>
+          <include name="close"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.testcases.SignUpPageTest -->
+      <class name="com.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="validatePageTitle"/>
+          <include name="close"/>
+          <include name="initializeTest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

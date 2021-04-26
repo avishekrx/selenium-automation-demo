@@ -45,8 +45,7 @@ public class SignUpPageTest extends Testbase{
 	@AfterMethod
 	public void close()
 	{
-		driver.close();
-		driver.quit();
+		tearDown();
 	}
 
 }
