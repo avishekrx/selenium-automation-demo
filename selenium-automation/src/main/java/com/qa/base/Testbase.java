@@ -30,26 +30,38 @@ public class Testbase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	
+	   
 		
 	}
 	
 
-//	@Test
+  // @Test
 	public static void initialize()
 	{
-		String browserurl = prop.getProperty("url");
+	//	String browserurl = prop.getProperty("url");
 			
-		System.setProperty("webdriver.chrome.driver", "chromedriver");
+	//	System.setProperty("webdriver.chrome.driver", "chromedriver");
 		
 		 driver = new ChromeDriver();
 		
-		 driver.get(browserurl);
+	//	 driver.get(browserurl);
+		 
+		 driver.manage().window().maximize();
 		 
 		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		 
 		 
 		
 	}
+   
+   //@Test()
+	   public static void tearDown()
+	   {
+		   System.out.println("Close driver instance");
+		   driver.close();
+		   driver.quit();
+	   }
+   	
+	
 
 }
